@@ -1,10 +1,14 @@
 const { urlencoded } = require('express')
+const colors=require('colors')
 const express= require('express')
 const dotenv=require('dotenv').config()
+const connectDB=require('./config/db')
 const {errorHandler}=require('./middleware/errorMiddleware')
 /* we are calling .env file to get the port number */
 const port= process.env.PORT  || 8000
 
+
+connectDB()
 
 /* initialize express */
 const app= express()

@@ -1,1 +1,4 @@
 goal setter app cluster username : goal123 password:goal123
+
+to retrive goals based on user id check goalRoute line 6,7 and goalController line 12 and protect function in authMiddleware is where the logic is 
+configured

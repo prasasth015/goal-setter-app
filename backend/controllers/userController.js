@@ -74,13 +74,8 @@ const loginUser=asyncHandler(async(req, res)=>{
 //@acces Private
 // this will retrive the user based on the token that we are passsigng
 const getMe=asyncHandler(async(req, res)=>{
-    const {_id, name, email}= await User.findById(req.user.id)
 
-    res.status(200).json({
-        id:_id,
-        name,
-        email,
-    })
+    res.status(200).json(req.user)
 })
 
 //Generate JWT token/  add this object in registerUser and login method above
